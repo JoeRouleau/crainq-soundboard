@@ -13,7 +13,7 @@ export class VoiceMessageComponent {
   mode : SoundMode = SoundMode.Stop;
   iconName: string = "play_circle_outline";
   sound: Howl = {} as Howl;
-  
+
   public click(mode: string) {
     if(mode === SoundMode.Stop) {
       this.play()
@@ -26,7 +26,6 @@ export class VoiceMessageComponent {
   public play() {
     this.mode = SoundMode.Play
     this.iconName = "stop_circle_outline"
-    //Howler.stop();
     this.sound = new Howl({
       src:[this.vocal.path],
     });
