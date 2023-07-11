@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "title": "Couillon pas de couilles",
+    "content": "Test",
+    "path": "assets/audio/couillon.wav"
+  },
+  {
+    "id": "2",
+    "title": "C'est moi Lefab",
+    "content": "Test",
+    "path": "assets/audio/moi_lefab.wav"
+  },
+  {
+    "id": "3",
+    "title": "Trop tard",
+    "content": "Test",
+    "path": "assets/audio/trop_tard.wav"
+  }
+]

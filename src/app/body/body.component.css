@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  
+  .box {
+    width: 133vh;
+    height: 75vh;
+    padding: 15px;
+    margin: 40px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+  }
+
+app-voice-message-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:baseline
+}
