@@ -1,0 +1,22 @@
+mat-card {
+    width: 200px;
+    margin: 5px;
+}
+
+mat-card-content {
+    color: white;
+}
+
+mat-card-header {
+    color: white;
+    font-weight: bold;
+}
+
+mat-icon {
+    color: white;
+}
+
+mat-icon:hover {
+    color: greenyellow;
+    cursor: pointer;
+}
