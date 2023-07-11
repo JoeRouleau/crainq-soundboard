@@ -16,5 +16,107 @@
     "title": "Trop tard",
     "content": "Il est trop tard",
     "path": "assets/audio/trop_tard.wav"
+  },
+  {
+    "id": "4",
+    "title": "Élabore d'abord",
+    "content": "Criss esti élabore d'abord tabarnak pèse sur le piton du micro pis parle esti euh non mon chef quel chef de quoi tu parles t'es rendu ou avec tes skis dans le bain toi men",
+    "path": "assets/audio/elabore.wav"
+  },
+  {
+    "id": "5",
+    "title": "Groupe de marde",
+    "content": "",
+    "path": "assets/audio/groupe_de_marde.wav"
+  },
+  {
+    "id": "6",
+    "title": "Bonne journée mes protects de marde",
+    "content": "",
+    "path": "assets/audio/protect_de_marde.wav"
+  },
+  {
+    "id": "7",
+    "title": "Des bonhommes fâchés...",
+    "content": "",
+    "path": "assets/audio/bonhommes_faches.wav"
+  },
+  {
+    "id": "8",
+    "title": "Juste parce que t'as dit ça Joey",
+    "content": "",
+    "path": "assets/audio/dis_ca_joey.wav"
+  },
+  {
+    "id": "9",
+    "title": "Va chier mange de la marde",
+    "content": "",
+    "path": "assets/audio/va_chier_mange_dla_marde.wav"
+  },
+  {
+    "id": "10",
+    "title": "Dis le dont mon petit garçon",
+    "content": "",
+    "path": "assets/audio/petit_garcon.wav"
+  },
+  {
+    "id": "11",
+    "title": "Je vais crier si ça me tente",
+    "content": "",
+    "path": "assets/audio/crier_si_ca_me_tente.wav"
+  },
+  {
+    "id": "12",
+    "title": "Dis-y qui m'appelle",
+    "content": "",
+    "path": "assets/audio/qui_mappelle.wav"
+  },
+  {
+    "id": "13",
+    "title": "Bye tout de suite bye",
+    "content": "",
+    "path": "assets/audio/bye_tout_de_suite.wav"
+  },
+  {
+    "id": "14",
+    "title": "Spiritueusmismis",
+    "content": "",
+    "path": "assets/audio/spiritueusmismis.wav"
+  },
+  {
+    "id": "15",
+    "title": "Jésus pourquoi t'es blanc?",
+    "content": "",
+    "path": "assets/audio/jesus_blanc.wav"
+  },
+  {
+    "id": "16",
+    "title": "Usurpation fake fake fake fake",
+    "content": "",
+    "path": "assets/audio/usurpation_fake.wav"
+  },
+  {
+    "id": "17",
+    "title": "Épais qui fait boire son enfant",
+    "content": "",
+    "path": "assets/audio/epais_boire_enfant.wav"
+  },
+  {
+    "id": "18",
+    "title": "Ton truck est tu encore à vendre",
+    "content": "",
+    "path": "assets/audio/truck_a_vendre.wav"
+  },
+  {
+    "id": "17",
+    "title": "Épais qui fait boire son enfant",
+    "content": "",
+    "path": "assets/audio/epais_boire_enfant.wav"
+  },
+  {
+    "id": "17",
+    "title": "Épais qui fait boire son enfant",
+    "content": "",
+    "path": "assets/audio/epais_boire_enfant.wav"
   }
 ]

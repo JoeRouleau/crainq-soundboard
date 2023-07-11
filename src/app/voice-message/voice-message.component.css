@@ -1,22 +1,30 @@
 mat-card {
-    width: 200px;
-    margin: 5px;
+  width: 200px;
+  height: 100px;
+  margin: 5px;
 }
 
 mat-card-content {
-    color: white;
+  color: white;
 }
 
 mat-card-header {
-    color: white;
-    font-weight: bold;
+  color: white;
+  font-weight: bold;
 }
 
 mat-icon {
-    color: white;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 
 mat-icon:hover {
-    color: greenyellow;
-    cursor: pointer;
+  color: greenyellow;
+  cursor: pointer;
+}
+
+.carte {
+  position: relative;
 }
