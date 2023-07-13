@@ -1,9 +1,12 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FilterServiceService {
+  clickEvent: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor() { }
+  triggerClickEvent() {
+    this.clickEvent.emit();
+  }
 }
