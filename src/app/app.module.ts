@@ -12,6 +12,7 @@ import { VoiceMessageListComponent } from './voice-message-list/voice-message-li
 import { VoiceMessageComponent } from './voice-message/voice-message.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FiltersComponent } from './filters/filters.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     BodyComponent,
     VoiceMessageListComponent,
-    VoiceMessageComponent
+    VoiceMessageComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,

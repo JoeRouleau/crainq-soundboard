@@ -1,5 +1,5 @@
 <div class="carte">
-  <mat-card>
+  <mat-card [ngClass]="vocal.fache ? 'coral-card' : 'grey-card'">
     <mat-card-header>{{ vocal.title }}</mat-card-header>
     <mat-card-actions class="icons">
       <mat-icon (click)="click(mode)">{{iconName}}</mat-icon>
