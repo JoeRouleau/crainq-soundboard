@@ -10,6 +10,8 @@ import { FilterServiceService } from '../filter-service.service';
 })
 export class VoiceMessageListComponent implements OnInit {
   allVocals: Vocal[] = [];
+  angryVocals: Vocal[] = [];
+
   vocauxList: Vocal[] = [];
   angryFilter: boolean = false;
 
@@ -26,7 +28,7 @@ export class VoiceMessageListComponent implements OnInit {
   private loadInitialVoiceMessages() {
     this.http.get<Vocal>('assets/vocaux.json').subscribe((data: any) => {
       this.allVocals = data;
-      console.log(this.allVocals);
+      this.angryVocals = this.allVocals.filter(vocal => vocal.fache);
       this.vocauxList = this.allVocals;
     });
   }
@@ -40,7 +42,7 @@ export class VoiceMessageListComponent implements OnInit {
   private toggleFilter() {
     this.angryFilter = !this.angryFilter
     if(this.angryFilter) {
-      this.vocauxList = this.allVocals.filter(vocal => vocal.fache);
+      this.vocauxList = this.angryVocals;
     } else {
       this.vocauxList = this.allVocals;
     }
