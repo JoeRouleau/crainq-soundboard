@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Vocal } from '../interfaces/Vocal';
 import { HttpClient } from '@angular/common/http';
 import { FilterServiceService } from '../filter-service.service';
@@ -14,6 +14,8 @@ export class VoiceMessageListComponent implements OnInit {
 
   vocauxList: Vocal[] = [];
   angryFilter: boolean = false;
+
+  @Input() searchBox: string = '';
 
   constructor(
     private http: HttpClient,
@@ -41,10 +43,6 @@ export class VoiceMessageListComponent implements OnInit {
 
   private toggleFilter() {
     this.angryFilter = !this.angryFilter
-    if(this.angryFilter) {
-      this.vocauxList = this.angryVocals;
-    } else {
-      this.vocauxList = this.allVocals;
-    }
+    this.vocauxList = this.angryFilter ? this.angryVocals : this.allVocals;
   }
 }

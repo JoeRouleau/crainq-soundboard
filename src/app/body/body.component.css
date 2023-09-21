@@ -1,3 +1,17 @@
+input {
+  flex: 0;
+  max-width: 25%;
+  justify-self: top;
+  align-self: flex-start;
+  display: inline-block;
+}
+.filterbox{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
 .container {
     display: flex;
     justify-content: center;
@@ -6,6 +20,9 @@
   }
   
   .box {
+    display: flex;
+    flex-direction: column;
+    
     width: 126vh;
     height: 75vh;
     padding: 15px;

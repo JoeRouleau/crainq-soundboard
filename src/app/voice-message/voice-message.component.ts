@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {Howl} from 'howler';
 import { Vocal } from '../interfaces/Vocal';
 import { SoundMode } from '../interfaces/SoundMode';
@@ -9,13 +9,31 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './voice-message.component.html',
   styleUrls: ['./voice-message.component.css']
 })
-export class VoiceMessageComponent {
+export class VoiceMessageComponent implements OnInit {
   @Input() vocal: Vocal = {} as Vocal;
   mode : SoundMode = SoundMode.Stop;
   iconName: string = "play_circle_outline";
   sound: Howl = {} as Howl;
+  dureeVocal: string = "0";
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
+
+  ngOnInit() {
+    this.sound = new Howl({
+      src:[this.vocal.path],
+    });
+
+    
+    var durationInSeconds = this.sound.duration();
+    var formattedDuration = this.formatTime(durationInSeconds);
+    this.dureeVocal = formattedDuration;
+    
+    return new Promise((resolve, reject) => {
+      this.sound.on('load', function() { 
+      })
+    })
+  }
 
   public click(mode: string) {
     if(mode === SoundMode.Stop) {
@@ -29,9 +47,7 @@ export class VoiceMessageComponent {
   public play() {
     this.mode = SoundMode.Play
     this.iconName = "stop_circle_outline"
-    this.sound = new Howl({
-      src:[this.vocal.path],
-    });
+    
     this.sound.play();
     this.sound.once('end', () => {
       this.stop();
@@ -56,6 +72,12 @@ export class VoiceMessageComponent {
       downloadLink.click();
       URL.revokeObjectURL(url);
     })
+  }
+
+  public formatTime(duration: number) {
+    var minutes = Math.floor(duration / 60);
+    var seconds = Math.floor(duration % 60);
+    return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
   }
 
 }

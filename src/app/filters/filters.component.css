@@ -1,5 +1,5 @@
 mat-chip-listbox {
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
 
 mat-chip {
@@ -12,6 +12,9 @@ mat-chip {
     font-weight: bold;
     text-align:center;
     border-radius: 10px;
+    justify-self: center;
+    vertical-align: middle;
+    align-self: center;
 }
 
 .filter-list:hover {

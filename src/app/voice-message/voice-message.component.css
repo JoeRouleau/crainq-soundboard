@@ -46,3 +46,11 @@ mat-icon:hover {
   position: absolute;
   bottom: 0;
 }
+
+.test {
+  margin-top: 13px;
+  font-weight: light;
+  font-size: 12px;
+  text-align: end;
+  width: 100px;
+}
