@@ -20,14 +20,14 @@ export class VoiceMessageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sound = new Howl({
+    const sound = new Howl({
       src:[this.vocal.path],
+      onload: () => {
+        this.dureeVocal = this.formatTime(Math.round(sound.duration()))
+      }
     });
 
-    
-    var durationInSeconds = this.sound.duration();
-    var formattedDuration = this.formatTime(durationInSeconds);
-    this.dureeVocal = formattedDuration;
+    this.sound = sound
     
     return new Promise((resolve, reject) => {
       this.sound.on('load', function() { 
