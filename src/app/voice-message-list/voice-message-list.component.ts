@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Vocal } from '../interfaces/Vocal';
 import { HttpClient } from '@angular/common/http';
 import { FilterServiceService } from '../filter-service.service';
+import { VocalSearchService } from 'src/services/vocal-search.service';
 
 @Component({
   selector: 'app-voice-message-list',
@@ -15,11 +16,12 @@ export class VoiceMessageListComponent implements OnInit {
   vocauxList: Vocal[] = [];
   angryFilter: boolean = false;
 
-  @Input() searchBox: string = '';
+  @Input() inputValue: string = '';
 
   constructor(
     private http: HttpClient,
-    private filterService: FilterServiceService
+    private filterService: FilterServiceService,
+    private searchService: VocalSearchService
   ) {}
 
   ngOnInit() {
@@ -44,5 +46,15 @@ export class VoiceMessageListComponent implements OnInit {
   private toggleFilter() {
     this.angryFilter = !this.angryFilter
     this.vocauxList = this.angryFilter ? this.angryVocals : this.allVocals;
+  }
+
+  onSearchKey(inputValue: string) {
+    console.log(inputValue)
+    if(inputValue.length > 2) {
+      this.vocauxList = this.searchService.getSearchVocal(inputValue)
+    }
+    else {
+      this.vocauxList = this.allVocals
+    }
   }
 }

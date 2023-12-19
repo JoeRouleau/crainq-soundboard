@@ -2,8 +2,8 @@
     <div class="box">
         <div class="filterbox">
             <app-filters></app-filters>
-            <input oninput=""/>
+            <input (input)="searchKeyEnter($event)"/>
         </div>
-        <app-voice-message-list></app-voice-message-list>
+        <app-voice-message-list #msglist></app-voice-message-list>
     </div>
   </div>
